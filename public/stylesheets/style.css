@@ -6,3 +6,34 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* Style the navigation bar */
+nav {
+  background-color: #007BFF; /* Set your desired background color */
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /* Set your desired text color */
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Style the login button differently */
+nav a.login {
+  background-color: #28a745; /* Set your desired background color */
+  border-radius: 5px;
+}
+
+
+nav a:hover {
+  background-color: #0056b3; /* Set your desired hover background color */
+}
+
+/* Style the main content area */
+main {
+  padding: 20px;
+}
