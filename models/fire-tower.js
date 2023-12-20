@@ -12,6 +12,9 @@ const fireTowerSchema = new Schema ( {
         enum: ['Catskills', 'Adirondacks'],
         required: true,
     },
+    dateCompleted: {
+        type: Date
+    },
     yearBuilt: {
         type: Number,
         required: true,

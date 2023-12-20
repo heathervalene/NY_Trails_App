@@ -1,7 +1,30 @@
-//list of all trails
 
 <%- include('../partials/header') %>
 
+<h2>New York Trails</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Trail Name</th>
+      <th>Length in miles</th>
+      <th>Elevation Gain</th>
+      <th>Route Type</th>
+      <th>Difficulty Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% trails.forEach(t => { %>
+      <tr>
+        <td><%= t.trailName %></td>
+        <td><%= t.length %></td>
+        <td><%= t.elevationGain %></td>
+        <td><%= t.routeType %></td>
+        <td><%= t.difficultyLevel %></td>
+        <td><a href="/trails/<%= t._id %>">Trail Details</a></td>
+      </tr>
+      <% })%>
+  </tbody>
+</table>
 
 
 
@@ -9,5 +32,4 @@
 
 
 
-
-<%- include('../partials/footer')
+<%- include('../partials/footer') %>

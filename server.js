@@ -14,7 +14,8 @@ require('./config/database');
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const trailsRouter = require('./routes/trails')
+//var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -41,7 +42,8 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/trails', trailsRouter);
+//app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
