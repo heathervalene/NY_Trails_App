@@ -15,14 +15,6 @@ const fireTowerSchema = new Schema ( {
     dateCompleted: {
         type: Date
     },
-    yearBuilt: {
-        type: Number,
-        required: true,
-    },
-    height: {
-        type: Number,
-        required: true,
-    },
 }, {
     timestamps: true
 });

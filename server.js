@@ -16,6 +16,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 const trailsRouter = require('./routes/trails')
 const reviewsRouter = require('./routes/reviews')
+const fireTowerRouter = require('./routes/fire-towers');
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.use(function (req, res, next) {
 app.use('/', indexRouter);
 app.use('/trails', trailsRouter);
 app.use('/', reviewsRouter);
+app.use('/', fireTowerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
