@@ -10,6 +10,22 @@ async function index (req,res) {
     }
 }
 
+async function show(req,res) {
+    try {
+    const trail = await Trail.findById(req.params.id)
+    res.render('trails/show', {trail})
+} catch (err) {
+res.render('trails/show', {errorMsg: err.message})
+}
+}
+
+
+
+
+
+
+
 module.exports = {
-    index
+    index,
+    show
 }
