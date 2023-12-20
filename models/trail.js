@@ -44,7 +44,7 @@ elevationGain:
 routeType: 
 { type: String,
     required: true,
-    enum: ['Out and back', 'Loop']
+    enum: ['out and back', 'Loop']
 },
 difficultyLevel: 
 { type: Number,

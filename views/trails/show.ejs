@@ -9,11 +9,70 @@
 <div>Elevation Gain: </div>
 <div><%= trail.elevationGain %></div>
 <div>Route Type: </div>
+<div><%= trail.routeType %></div>
+<div>Difficulty Level: </div>
 <div><%= trail.difficultyLevel %></div>
 </section>
 
 <br><br>
+<% if (user) { %>
+    <form id="add-review-form" method="POST" action="/trails/<%= trail._id %>/reviews">
+      <label>Review:</label>
+      <textarea name="content"></textarea>
+      <label>Rating:</label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input type="submit" value="Add Review">
+    </form>
+  <% } %>
 
+  <% if (trail.reviews.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th>Review</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <% let total = 0 %>
+        <% trail.reviews.forEach(function(t) { %>
+       
+          <% total += t.rating %>
+          <th></th>
+          <td><%= t.rating %></td>
+         
+          <td>
+            <% if (user?._id.equals(t.user)) { %>
+              <form action="/reviews/<%= t._id %>?_method=DELETE" method="POST">
+                <button type="submit">delete</button>
+              </form>
+            <% } %>
+          </td>
+          <tr>
+            <td class="review-user"><img alt="avatar" src="<%= t.userAvatar %>" referrerpolicy="no-referrer" ><%= t.userName %></td>
+            <td><%= t.createdAt.toLocaleDateString() %></td>
+            <td><%= t.content %></td>
+            <td><%= t.rating %></td>
+          </tr>
+        <% }); %>
+        <tr>
+          <td colspan="3"></td>
+          <td><strong><%= (total / trail.reviews.length).toFixed(1) %></strong></td>
+        </tr>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Reviews Yet</h5>
+  <% } %>
 
 
 
