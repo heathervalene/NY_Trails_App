@@ -14,15 +14,9 @@
 
     <% fireTower.forEach(function(f) { %>
         <tr>
-            <td>
-                <%= f.name %>
-            </td>
-            <td>
-                <%= f.region %>
-                <td>
-                    <%= f.dateCompleted %>
-                </td>
-            </td>
+            <td> <%= f.name %></td>
+            <td><%= f.region %></td>
+            <td> <%= f.dateCompleted %></td>
         </tr>
         <% }); %>
 </tbody>
@@ -35,27 +29,21 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>Length</th>
+            <th>Elevation Gain</th>
+            <th>Route Type</th>
+            <th>difficulty level</th>
         </tr>
     </thead>
     <tbody>
 
-    <% trails.forEach(function(t) { %>
+    <% trail.forEach(function(t) { %>
         <tr>
-            <td>
-                <%= t.trailName %>
-            </td>
-            <td>
-                <%= t.length %>
-            </td>
-            <td>
-                <%= t.elevationGain %>
-            </td>
-            <td>
-                <%= t.routeType %>
-            </td>
-            <td>
-                <%= t.difficultyLevel %>
-            </td>
+            <td> <%= t.trailName %> </td>
+            <td> <%= t.length %></td>
+            <td><%= t.elevationGain %></td>
+            <td><%= t.routeType %></td>
+            <td><%= t.difficultyLevel %></td>
         </tr>
         <% }); %>
 </tbody>

@@ -37,6 +37,7 @@ async function completedHike(req,res) {
 
 
 
+
 module.exports = {
     index,
     show,

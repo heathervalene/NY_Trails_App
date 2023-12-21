@@ -17,6 +17,8 @@ var indexRouter = require('./routes/index');
 const trailsRouter = require('./routes/trails')
 const reviewsRouter = require('./routes/reviews')
 const fireTowerRouter = require('./routes/fire-towers');
+const myHikesRouter= require('./routes/myHikes')
+
 
 var app = express();
 
@@ -46,6 +48,8 @@ app.use('/', indexRouter);
 app.use('/trails', trailsRouter);
 app.use('/', reviewsRouter);
 app.use('/fire-tower', fireTowerRouter);
+app.use('/trails', myHikesRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
