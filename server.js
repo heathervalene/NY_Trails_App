@@ -48,7 +48,7 @@ app.use('/', indexRouter);
 app.use('/trails', trailsRouter);
 app.use('/', reviewsRouter);
 app.use('/fire-tower', fireTowerRouter);
-app.use('/trails', myHikesRouter)
+app.use('/hikes', myHikesRouter)
 
 
 // catch 404 and forward to error handler

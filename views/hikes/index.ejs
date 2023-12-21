@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h2>My completed Hikes</h2>
+<table id="hike-list">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Length</th>
+            <th>Elevation Gain</th>
+            <th>Route Type</th>
+            <th>Difficulty Level</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% trails.forEach(function(t) { %>
+            <tr>
+                <td> <%= t.trailName %> </td>
+                <td> <%= t.length %> </td>
+                <td> <%= t.elevationGain %> </td>
+                <td> <%= t.routeType %> </td>
+                <td> <%= t.difficultyLevel %> </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<%- include('../partials/footer') %>

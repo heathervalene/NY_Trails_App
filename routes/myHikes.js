@@ -3,6 +3,6 @@ const router = express.Router();
 
 const myHikesCtrl = require('../controllers/myHikes')
 
-router.get('/trails/:id/new', myHikesCtrl.myHikes);
+router.get('/', myHikesCtrl.myHikes);
 
 module.exports =router

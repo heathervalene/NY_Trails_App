@@ -17,10 +17,14 @@ async function create (req,res) {
 }
 
 async function addFireTowerList(req,res) {
-    const fireTower = await FireTower.findById(req.params.id);
-    fireTower.push(req.params.id)
-    await fireTower.save();
-    res.redirect(`/trails/new`)
+    let user = await User.findById(req.params.userid);
+    user.addFireTowerList.push(req.params.id)
+    try { 
+        await user.save()
+        res.redirect('/trails/new')
+    } catch (err) {
+        res.render('trails/show',{errorMsg: err.message})
+    }
 }
 
 

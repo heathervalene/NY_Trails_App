@@ -1,16 +1,20 @@
 const FireTower = require('../models/fire-tower');
 const Trail = require('../models/trail');
+const User = require('../models/user');
 
-
-async function myHikes(req,res) {
+async function myHikes(req, res) {
     try {
-    const trails = await Trail.findById(req.params.id);
-    const fireTowers = await FireTower.findById(req.params.id);
-    res.render('trails/new', trails, fireTowers)
-} catch (err)
- {
-res.render('/tails/show', {errorMsg: err.message})
- }
+        let user = await User.findById(req.user._id).populate({
+            path: 'completedHike',
+            model: 'Trail'
+        });
+
+        console.log(user.completedHike)
+
+        res.render('hikes', { trails: user.completedHike });
+    } catch (err) {
+        res.render('errors/errorPage', { errorMsg: err.message });
+    }
 }
 
 
