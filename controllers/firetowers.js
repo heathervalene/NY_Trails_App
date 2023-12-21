@@ -16,20 +16,21 @@ async function create (req,res) {
     }
 }
 
-async function addFireTowerList(req,res) {
+async function completedFiretower(req,res) {
     let user = await User.findById(req.params.userid);
-    user.addFireTowerList.push(req.params.id)
+    user.completedFiretower.push(req.params.id)
     try { 
         await user.save()
-        res.redirect('/trails/new')
+        res.redirect('/hikes')
     } catch (err) {
         res.render('trails/show',{errorMsg: err.message})
     }
 }
 
 
+
 module.exports = {
     new: newFiretower,
     create,
-    addFireTowerList
+    completedFiretower
 }

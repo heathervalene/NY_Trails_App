@@ -1,5 +1,31 @@
 <%- include('../partials/header') %>
 
+<h2>My completed Fire Towers</h2>
+<table id="firetower-list">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Region</th>
+            <th>Date Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <% firetower.forEach(function(f) { %>
+        <tr>
+            <td> <%= f.name %></td>
+            <td><%= f.region %></td>
+            <td> <%= f.dateCompleted %></td>
+        </tr>
+        <% }); %>
+</tbody>
+</table>
+
+
+<br> <br>
+
+
+
 <h2>My completed Hikes</h2>
 <table id="hike-list">
     <thead>

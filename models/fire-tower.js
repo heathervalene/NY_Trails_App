@@ -20,4 +20,4 @@ const fireTowerSchema = new Schema ( {
 });
 
 
-module.exports =mongoose.model('FireTower', fireTowerSchema);
+module.exports =mongoose.model('Firetower', fireTowerSchema);

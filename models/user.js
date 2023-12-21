@@ -12,6 +12,10 @@ const userSchema = new Schema({
     completedHike: [{
       type: Schema.Types.ObjectId,
       ref: 'Trail'
+    }],
+    completedFiretower: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Firetower'
     }]
   },
   {
