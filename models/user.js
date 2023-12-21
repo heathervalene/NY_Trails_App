@@ -8,8 +8,13 @@ const userSchema = new Schema({
       required: true
     },
     email: String,
-    avatar: String
-  }, {
+    avatar: String,
+    completedHike: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Trail'
+    }]
+  },
+  {
     timestamps: true
   });
 

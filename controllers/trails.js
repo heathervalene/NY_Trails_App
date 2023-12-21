@@ -1,4 +1,5 @@
 const Trail = require('../models/trail');
+const User = require('../models/user');
 
 
 async function index (req,res) {
@@ -19,6 +20,17 @@ res.render('trails/show', {errorMsg: err.message})
 }
 }
 
+async function completedHike(req,res) {
+    let user = await User.findById(req.params.userid);
+    user.completedHike.push(req.params.id)
+    try { 
+        await user.save()
+        res.redirect('/trails/new')
+    } catch (err) {
+        res.render('trails/show',{errorMsg: err.message})
+    }
+}
+
 
 
 
@@ -27,5 +39,6 @@ res.render('trails/show', {errorMsg: err.message})
 
 module.exports = {
     index,
-    show
+    show,
+    completedHike
 }

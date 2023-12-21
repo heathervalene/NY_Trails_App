@@ -16,7 +16,7 @@
 
 <br><br>
 
-<form method="POST" action="/trails/<%= trail._id %>/new" >
+<form id="completed-hike-form" method="POST" action="/trails/<%= trail._id %>/completed-hike/user/<%= user._id %>" >
     <input type="hidden"  value="extra_submit_value">
     <button type="submit" name="submit_param" value="submit_value" class="link-button">
       I completed this hike! </button>
