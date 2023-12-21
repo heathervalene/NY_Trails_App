@@ -7,7 +7,7 @@ const ensuredLoggedIn = require('../config/ensureLoggedIn');
 
 router.get('/', trailsCtrl.index);
 router.get('/:id', trailsCtrl.show);
-router.post('/:id/completed-hike/user/:userid', trailsCtrl.completedHike)
+router.post('/:id/completed-hike/user/:userid', ensuredLoggedIn, trailsCtrl.completedHike)
 
 
 module.exports =router;

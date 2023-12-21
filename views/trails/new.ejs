@@ -42,7 +42,19 @@
     <% trails.forEach(function(t) { %>
         <tr>
             <td>
-                <%= t.name %>
+                <%= t.trailName %>
+            </td>
+            <td>
+                <%= t.length %>
+            </td>
+            <td>
+                <%= t.elevationGain %>
+            </td>
+            <td>
+                <%= t.routeType %>
+            </td>
+            <td>
+                <%= t.difficultyLevel %>
             </td>
         </tr>
         <% }); %>
