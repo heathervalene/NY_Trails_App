@@ -4,7 +4,7 @@ const firetowersCtrl = require('../controllers/firetowers');
 
 
 router.get('fire-tower/new', firetowersCtrl.new);
-router.post('/', firetowersCtrl.create)
+router.post('/fire-tower', firetowersCtrl.create)
 
 
 

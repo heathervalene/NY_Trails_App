@@ -15,6 +15,16 @@
 </section>
 
 <br><br>
+
+<form method="POST" action="/trails/<%= trail._id %>/new" >
+    <input type="hidden"  value="extra_submit_value">
+    <button type="submit" name="submit_param" value="submit_value" class="link-button">
+      I completed this hike! </button>
+  </form>
+
+<br><br>
+
+
 <% if (user) { %>
     <form id="add-review-form" method="POST" action="/trails/<%= trail._id %>/reviews">
       <label>Review:</label>

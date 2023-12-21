@@ -1,12 +1,85 @@
 //my hikes page with list of completed hikes and fire towers
 <%- include('../partials/header') %>
 
+<h2>My completed Fire Towers</h2>
+<table id="firetower-list">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Region</th>
+            <th>Date Completed</th>
+        </tr>
+    </thead>
+    <tbody>
 
+    <% fireTower.forEach(function(f) { %>
+        <tr>
+            <td>
+                <%= f.name %>
+            </td>
+            <td>
+                <%= f.region %>
+                <td>
+                    <%= f.dateCompleted %>
+                </td>
+            </td>
+        </tr>
+        <% }); %>
+</tbody>
+</table>
 
+<br>
 
+<h2>My completed Hikes</h2>
+<table id="hike-list">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
 
+    <% trails.forEach(function(t) { %>
+        <tr>
+            <td>
+                <%= t.name %>
+            </td>
+        </tr>
+        <% }); %>
+</tbody>
+</table>
 
+<br>
 
-
+<h2>Add your completed hike</h2>
+<form action="/trails" method="POST">
+    <label for="trailName">Trail Name:</label>
+    <select name="trailName" >
+    <option value="Hunter Mountain">Hunter Mountain/option>
+    <option value="Balsam Lake Mountain">Balsam Lake Mountain</option>
+    <option value="Hadly Mountain">Hadly Mountain</option>
+    <option value="Poke O Moonshine Mountain">Poke O Moonshine Mountain</option>
+    <option value="Spruce Mountain">Spruce Mountain</option>
+    <option value="Overlook Mountain">Overlook Mountain</option>
+    <option value="Pillsbury Mountain">Pillsbury Mountain</option>
+    <option value="Black Mountain">Black Mountain</option>
+    <option value="Red Hill Mountain">Red Hill Mountain</option>
+    <option value="Belfry Mountain">Belfry Mountain</option>
+    <option value="Vanderwacher Mountain">Vanderwacher Mountain</option>
+    <option value="Mount Tremper">Mount Tremper</option>
+    <option value="Goodnow Mountain">Goodnow Mountain/option>
+    <option value="Snowy Mountain">Snowy Mountain</option>
+    <option value="Mount Arab">Mount Arab</option>
+    <option value="Blue Mountain">Blue Mountain</option>
+    <option value="Owls Head Mountain">Owls Head Mountain</option>
+    <option value="Kane Mountain">Kane Mountain</option>
+    <option value="Whiteface Mountain">Whiteface Mountain</option>
+    <option value="Azure Mountain">Azure Mountain</option>
+    <option value="Saint Regis Mountain">Saint Regis Mountain</option>
+    <option value="Wakely Mountain">Wakely Mountain</option>
+    <option value="Mohonk Mountain">Mohonk Mountain</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
 
 <%- include('../partials/footer') %>

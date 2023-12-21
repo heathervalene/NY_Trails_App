@@ -16,8 +16,15 @@ async function create (req,res) {
     }
 }
 
+async function addFireTowerList(req,res) {
+    const fireTower = await FireTower.findById(req.params.id);
+    await fireTower.save();
+    res.redirect(`/trails/new`)
+}
+
 
 module.exports = {
     new: newFiretower,
-    create
+    create,
+    addFireTowerList
 }
