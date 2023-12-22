@@ -3,16 +3,29 @@
 
 <section id="details"></section>
 <img id="mountain-image" src="<%= trail.image%>" alt="Trail Image">
-<div>Trail Name:</div>
-<div><%= trail.trailName %></div>
-<div> Length:</div>
-<div><%= trail.length %></div>
-<div>Elevation Gain: </div>
-<div><%= trail.elevationGain %></div>
-<div>Route Type: </div>
-<div><%= trail.routeType %></div>
-<div>Difficulty Level: </div>
-<div><%= trail.difficultyLevel %></div>
+<br> 
+<table>
+    <tr>
+<td class="trail-info1">Trail Name:</td>
+<td><%= trail.trailName %></td>
+</tr>
+<tr>
+<td class="trail-info1"> Length:</td>
+<td><%= trail.length %></td>
+</tr>
+<tr>
+<td  class="trail-info1">Elevation Gain: </td>
+<td><%= trail.elevationGain %></td>
+</tr>
+<tr>
+<td  class="trail-info1">Route Type: </td>
+<td><%= trail.routeType %></td>
+</tr>
+<tr>
+<td class="trail-info1">Difficulty Level: </td>
+<td><%= trail.difficultyLevel %></td>
+</tr>
+</table>
 </section>
 
 <br><br>

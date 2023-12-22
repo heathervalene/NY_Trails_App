@@ -1,4 +1,5 @@
 const FireTower = require('../models/fire-tower');
+const User = require('../models/user');
 
 
 async function newFiretower(req,res) {
@@ -7,8 +8,12 @@ async function newFiretower(req,res) {
 };
 
 async function create(req,res) {
+    console.log(req.body)
     try {
-        await FireTower.create(req.body);
+       const firetower = await FireTower.create(req.body);
+       let user = await User.findById(req.user._id);
+       user.completedFiretower.push(firetower._id);
+       await user.save();
         res.redirect('/hikes')
     } catch (err) {
         console.log(err);
@@ -17,29 +22,9 @@ async function create(req,res) {
 }
 
 
-async function completedFiretower(req, res) {
-    try {
-        let user = await User.findById(req.user._id).populate([
-            {
-                path: 'completedHike',
-                model: 'Trail'
-            },
-            {
-                path: 'completedFiretower',
-                model: 'Firetower'
-            }
-        ]);
-        await FireTower.create(req.body);
-        user.completedFiretower.push(req.params.id)
-        res.render('hikes', { trails: user.completedHike, firetower:user.completedFiretower });
-    } catch (err) {
-        res.render('errors/errorPage', { errorMsg: err.message });
-    }
-}
-
 
 module.exports = {
     new: newFiretower,
     create,
-    completedFiretower
+   
 }

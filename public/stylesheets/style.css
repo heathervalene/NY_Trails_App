@@ -1,5 +1,9 @@
 body {
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   font-family: 'Montserrat', sans-serif;
   background-color: 	#faf0e6;
   color: #66545e;
@@ -11,7 +15,12 @@ body {
 nav {
   background-color: #667b68; 
   padding: 10px;
+  display: flex;
   text-align: center;
+  justify-content: center;
+ width: 100%;
+  margin: 2em;
+
 }
 
 nav a {
@@ -26,17 +35,23 @@ nav a {
 
 nav a:hover {
   background-color: 	#a3b899; 
+  border-radius: 1em;
 }
 
 #trail-header {
   text-align: center;
   font-size: 3em;
+  @media (max-width: 768px) {
+    font-size: 2em; /* Adjust the font size for smaller screens */
+  }
 }
 
 
 #all-trails-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -44,10 +59,11 @@ nav a:hover {
 .trail-tile {
   text-align: center;
   display: inline-block;
+  align-items: center;
   border: solid  #66545e;
   background-color: #f9f9f9;
   border-radius: 1.5em;
-  margin: 3em;
+  margin: 3vw;
   width: 15em; 
   height: 8em;
 }
@@ -69,14 +85,18 @@ nav a:hover {
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
+  font-size: 1em; /* Use viewport width units for font size */
+  @media (max-width: 768px) {
+    font-size: 0.8em; /* Adjust the font size for smaller screens */
+  }
 }
 
 /* Trail detail page */
 
 #details {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 
 }
 
@@ -90,6 +110,18 @@ nav a:hover {
   border-radius: 1em;
 }
 
+#details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#details td {
+  padding: 5px;
+}
+
+#details .trail-info1 {
+  font-weight: bold;
+}
 
 
 
