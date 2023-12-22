@@ -52,6 +52,7 @@ difficultyLevel:
     max: 5,
     default:1
 },
+image: String,
 reviews: [reviewSchema],
 },
 {

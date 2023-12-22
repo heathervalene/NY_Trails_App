@@ -9,7 +9,7 @@
     <li>In addition to recording the dates of your climb, please share your experience with others!</li>
 </ol>
 
-<form id="add-firetower-form" action="/fire-tower" method="POST">
+<form id="add-firetower-form" action="/fire-tower/user/<%= user._id %>" method="POST">
     <label for="name">Name:</label>
     <select name="name" >
     <option value="Snowy Mountain Fire Tower">Snowy Mountain Fire Tower</option>

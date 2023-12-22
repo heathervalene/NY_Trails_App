@@ -1,15 +1,17 @@
 body {
   padding: 50px;
   font-family: 'Montserrat', sans-serif;
+  background-color: 	#faf0e6;
+  color: #66545e;
 }
 
 a {
   color: #00B7FF;
 }
 
-/* Style the navigation bar */
+/* navigation bar */
 nav {
-  background-color: #007BFF; /* Set your desired background color */
+  background-color: #667b68; 
   padding: 10px;
   text-align: center;
 }
@@ -22,15 +24,15 @@ nav a {
   font-weight: bold;
 }
 
-/* Style the login button differently */
-nav a.login {
-  background-color: #28a745; /* Set your desired background color */
-  border-radius: 5px;
-}
 
 
 nav a:hover {
-  background-color: #0056b3; /* Set your desired hover background color */
+  background-color: 	#a3b899; 
+}
+
+#trail-header {
+  text-align: center;
+  font-size: 3em;
 }
 
 
@@ -42,13 +44,18 @@ nav a:hover {
 
 
 .trail-tile {
+  text-align: center;
   display: inline-block;
+  border: solid black;
   background-color: #f9f9f9;
+  border-radius: 2em;
   margin: 3em;
-  max-width: 20em;
+  width: 15em; 
+  height: 8em;
 }
 
 .trail-details {
+  color:#66545e;
   flex: 1;
   padding: 1em;
   display: flex;
@@ -57,10 +64,11 @@ nav a:hover {
 }
 
 .trail-details a {
+  color:#66545e;
   display: block;
   padding: 0.5em;
-  background-color: #007BFF;
-  color: #fff;
+  background-color: #78866b;
+  color: #fceee9;
   text-decoration: none;
   border-radius: 5px;
   text-align: center;

@@ -1,7 +1,7 @@
 const FireTower = require('../models/fire-tower');
 const Trail = require('../models/trail');
 const User = require('../models/user');
-const { completedFiretower } = require('./firetowers');
+
 
 async function myHikes(req, res) {
     try {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Page</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGQUiVodyZ0WA9-upov2fm1qIKf5aNUQM&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- Your map container -->
+    <div id="map"></div>
+
+    <!-- Your JavaScript code for map initialization -->
+    <script>
+        function initMap() {
+            // Your map initialization code goes here
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            });
+        }
+    </script>
+</body>
+</html>

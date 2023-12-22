@@ -13,7 +13,8 @@ const fireTowerSchema = new Schema ( {
         required: true,
     },
     dateCompleted: {
-        type: Date
+        type: Date,
+        required: true
     },
 }, {
     timestamps: true
