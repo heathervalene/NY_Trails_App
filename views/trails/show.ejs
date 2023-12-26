@@ -1,28 +1,29 @@
 <%- include('../partials/header') %>
 
 
-<section id="details"></section>
+
 <img id="mountain-image" src="<%= trail.image%>" alt="Trail Image">
 <br> 
+<section id="detail-table">
 <table>
     <tr>
-<td class="trail-info1">Trail Name:</td>
+<td >Trail Name:</td>
 <td><%= trail.trailName %></td>
 </tr>
 <tr>
-<td class="trail-info1"> Length:</td>
+<td> Length:</td>
 <td><%= trail.length %></td>
 </tr>
 <tr>
-<td  class="trail-info1">Elevation Gain: </td>
+<td  >Elevation Gain: </td>
 <td><%= trail.elevationGain %></td>
 </tr>
 <tr>
-<td  class="trail-info1">Route Type: </td>
+<td>Route Type: </td>
 <td><%= trail.routeType %></td>
 </tr>
 <tr>
-<td class="trail-info1">Difficulty Level: </td>
+<td>Difficulty Level: </td>
 <td><%= trail.difficultyLevel %></td>
 </tr>
 </table>
