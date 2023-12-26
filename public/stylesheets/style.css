@@ -98,7 +98,6 @@ nav a:hover {
 
 #mountain-image {
   margin:auto;
-  margin-top: 3em;
   display: block;
   width: 40em;
   height: 25em;
@@ -123,6 +122,51 @@ table {
 td {
   padding: 0.5em;
  
+}
+
+
+#add-review-form {
+ margin: 0 auto;
+  width: 40%;
+}
+
+input[type="submit"] {
+  width: 40%; 
+  border-radius: 0.5em;
+  background-color:#66545e;
+  color: white;
+  cursor: pointer;
+  border: none;
+
+}
+
+input[type="submit"]:hover {
+  background-color: #78866b;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th,
+td {
+  padding: 0.5em;
+  
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+}
+
+.review-user img {
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.5em;
 }
 
 

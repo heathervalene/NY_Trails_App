@@ -1,6 +1,15 @@
 <%- include('../partials/header') %>
 
-
+<% if(user) { %>
+  <form  method="POST" action="/trails/<%= trail._id %>/completed-hike/user/<%= user._id %>" >
+      <input type="hidden"  value="extra_submit_value">
+      <button id="complete" type="submit" name="submit_param" value="submit_value" class="link-button">
+        Add this hike to your profile! </button>
+    </form>
+  
+    <% } %>
+  
+  <br><br>
 
 <img id="mountain-image" src="<%= trail.image%>" alt="Trail Image">
 <br> 
@@ -31,15 +40,7 @@
 
 <br><br>
 
-<% if(user) { %>
-<form id="completed-hike-form" method="POST" action="/trails/<%= trail._id %>/completed-hike/user/<%= user._id %>" >
-    <input type="hidden"  value="extra_submit_value">
-    <button type="submit" name="submit_param" value="submit_value" class="link-button">
-      I completed this hike! </button>
-  </form>
-  <% } %>
 
-<br><br>
 
 
 <% if (user) { %>
@@ -72,24 +73,25 @@
     
         <% let total = 0 %>
         <% trail.reviews.forEach(function(t) { %>
-       
-          <% total += t.rating %>
-          <th></th>
-          <td><%= t.rating %></td>
-         
-          <td>
-            <% if (user?._id.equals(t.user)) { %>
-              <form action="/reviews/<%= t._id %>?_method=DELETE" method="POST">
-                <button type="submit">delete</button>
-              </form>
-            <% } %>
-          </td>
           <tr>
-            <td class="review-user"><img alt="avatar" src="<%= t.userAvatar %>" referrerpolicy="no-referrer" ><%= t.userName %></td>
+            <td class="review-user">
+              <img alt="avatar" src="<%= t.userAvatar %>" referrerpolicy="no-referrer" >
+              <%= t.userName %>
+            </td>
             <td><%= t.createdAt.toLocaleDateString() %></td>
             <td><%= t.content %></td>
-            <td><%= t.rating %></td>
+            <td>
+              <%= t.rating %>
+              </td>
+              <td>
+              <% if (user?._id.equals(t.user)) { %>
+                <form action="/reviews/<%= t._id %>?_method=DELETE" method="POST">
+                  <button type="submit">delete</button>
+                </form>
+              <% } %>
+            </td>
           </tr>
+          <% total += t.rating %>
         <% }); %>
         <tr>
           <td colspan="3"></td>
