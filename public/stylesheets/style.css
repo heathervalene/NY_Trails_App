@@ -11,6 +11,11 @@ body {
 
 
 /* navigation bar */
+
+#logo {
+  width: 2.5em;
+  height: 2.5em;
+}
 nav {
   background-color: #667b68; 
   padding: 10px;
@@ -33,6 +38,7 @@ nav a {
 
 
 nav a:hover {
+  display: inline;
   background-color: 	#a3b899; 
   border-radius: 1em;
 }
@@ -173,6 +179,7 @@ td {
 /* map*/
 
 #map {
+
   height: 400px; 
   width: 100%; 
 }
@@ -197,6 +204,17 @@ td {
 #firetower-list {
   margin-left: 1.25em;
   font-size: 1.25em;
+}
+
+#ft-photo {
+  width:20em;
+  height: 20em;
+  padding-bottom: 1em;
+  border-radius: 2.5em;
+  display: block;
+  margin-left: auto ;
+  margin-right: auto;
+ 
 }
 
 
