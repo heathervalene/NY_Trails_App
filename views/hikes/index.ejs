@@ -15,7 +15,7 @@
         <tr>
             <td> <%= f.name %></td>
             <td><%= f.region %></td>
-            <td> <%= f.dateCompleted %></td>
+            <td> <%= f.dateCompleted.toLocaleDateString() %></td>
         </tr>
         <% }); %>
 </tbody>

@@ -199,12 +199,11 @@ td {
   font-size: 1.25em;
 }
 
-#firetower-container {
-  margin:auto;
-}
+
 
 #firetower-form {
   margin-top: 1.25em;
+  margin: auto;
   max-width: 25em;
   background-color: #fff;
   padding: 1.25em;
