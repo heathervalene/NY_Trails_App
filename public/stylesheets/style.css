@@ -240,3 +240,43 @@ button:hover {
 }
 
 
+/*My hikes page */
+
+.my-hikes-head {
+  text-align: center;
+}
+
+
+#my-firetower-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#my-firetower-list th, #my-firetower-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#my-firetower-list th {
+  background-color: #f2f2f2;
+}
+
+
+#my-hike-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#my-hike-list th, #my-hike-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#my-hike-list th {
+  background-color: #f2f2f2;
+}
+
