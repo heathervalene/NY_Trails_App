@@ -178,11 +178,22 @@ td {
 
 /* map*/
 
-#map {
-
-  height: 400px; 
-  width: 100%; 
+#map-title {
+font-size: 2em;
 }
+
+#map {
+  position: absolute;
+  top: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 60vh; 
+  width: 90%; 
+  border:  solid #66545e;
+}
+
 
 
 
