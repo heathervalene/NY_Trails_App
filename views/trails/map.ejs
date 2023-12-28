@@ -1,17 +1,51 @@
  <%- include('../partials/header') %>
 
 
-<body>
+
     <h3>View Mountain Location</h3>
     <div id="map" ></div>
   
-  </body>
+
     <script> 
     function initMap() {
-       let hunter = {lat: 44.2247, lng: -73.8693};
        let map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 4, center: hunter});
-       let marker = new google.maps.Marker({position: hunter, map:map})
+        document.getElementById('map'),
+      {zoom: 10, 
+      center: {lat:42.248, lng:-74.159 }
+    });
+
+    let markerData =[ 
+      {lat: 42.072, lng: -74.122, title: 'Overlook Mountain Trail'},
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'}, 
+      {lat: 42.025, lng: -74.599, title: 'Balsam Lake Trail'},   
+      {lat:43.374, lng: -73.950, title: 'Hadely Mountain Trail'},   
+      {lat: 44.408, lng:-73.504, title: 'Poke-O-Moonshine Trail'},   
+      {lat:43.202, lng: -73.895, title: 'Spruce Mountain Trail'},   
+      {lat: 43.588, lng:-74.485, title: 'Pillsbury Mountain Trail'},   
+      {lat: 43.608,lng: -73.520, title: 'Black Mountain Trail'},   
+      {lat: 41.936,lng: -74.528, title: 'Red Hill Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},   
+      {lat: 42.248, lng:-74.159, title: 'Hunter Mountain Trail'},     
+    ];
+    for(let i=0; i< markerData.length; i++) {
+      let marker = new google.maps.Marker(
+        {position: {lat: markerData[i].lat, lng: markerData[i].lng},
+         map:map,
+        title: markerData[1].title})
+    }
+       
     }
     </script>
 
@@ -21,6 +55,6 @@
         console.error('Google Maps API failed to load.');
       }
     </script>
-    </body>
+  
 
     <%- include('../partials/footer') %>
