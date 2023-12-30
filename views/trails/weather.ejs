@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+
+<h1>Weather Information for <%= city %></h1>
+
+<% if (weather) { %>
+    <p>Temperature: <%= weather.main.temp %> &deg;C</p>
+    <p>Weather: <%= weather.weather[0].description %></p>
+    <!-- Add more details as needed -->
+<% } else { %>
+    <p>No weather data available for <%= city %></p>
+<% } %>
+
+
+
+
+<%- include('../partials/footer') %>
