@@ -8,6 +8,7 @@ const passport = require('passport')
 const methodOverride = require('method-override')
 
 
+
 require('dotenv').config();
 require('./config/database');
 require('./config/passport');
@@ -17,8 +18,9 @@ var indexRouter = require('./routes/index');
 const trailsRouter = require('./routes/trails')
 const reviewsRouter = require('./routes/reviews')
 const fireTowerRouter = require('./routes/fire-towers');
-const myHikesRouter= require('./routes/myHikes')
-const mapsRouter = require('./routes/maps')
+const myHikesRouter= require('./routes/myHikes');
+const mapsRouter = require('./routes/maps');
+const imagesRouter = require('./routes/images');
 
 
 
@@ -52,6 +54,7 @@ app.use('/', reviewsRouter);
 app.use('/fire-tower', fireTowerRouter);
 app.use('/hikes', myHikesRouter)
 app.use('/map', mapsRouter)
+app.use('/images', imagesRouter);
 
 
 

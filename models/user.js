@@ -16,7 +16,8 @@ const userSchema = new Schema({
     completedFiretower: [{
       type: Schema.Types.ObjectId,
       ref: 'Firetower'
-    }]
+    }],
+    images: String,
   },
   {
     timestamps: true
