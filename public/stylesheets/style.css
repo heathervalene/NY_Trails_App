@@ -194,6 +194,20 @@ font-size: 2em;
   border:  solid #66545e;
 }
 
+/*weather*/
+
+#weather {
+  position: absolute;
+  top: 1;
+  left: 0;
+  right: 0;
+  bottom: .5;
+  margin: auto;
+  height: 60vh; 
+  width: 90%; 
+  border:  solid #66545e;
+}
+
 
 
 
