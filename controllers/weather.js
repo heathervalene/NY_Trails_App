@@ -7,7 +7,7 @@ async function getWeather(req,res) {
         const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=42.01&lon=-74.38&units=imperial&exclude=hourly,daily&appid=${apiKey}`;
         const response = await axios.get(apiUrl);
         const weatherData = response.data;
-        const mapTilesUrl = `https://tile.openweathermap.org/map/temp_new/7/127/127.png?appid=${apiKey}`
+        const mapTilesUrl = `https://tile.openweathermap.org/map/temp_new/5/30/30.png?appid=${apiKey}`
         console.log(weatherData);
         res.render('trails/weather', { weatherData, mapTilesUrl });
      } catch (err) {

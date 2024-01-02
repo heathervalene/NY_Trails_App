@@ -6,6 +6,8 @@ var logger = require('morgan');
 const session = require('express-session')
 const passport = require('passport')
 const methodOverride = require('method-override')
+const multer = require('multer')
+
 
 
 
@@ -21,12 +23,26 @@ const reviewsRouter = require('./routes/reviews')
 const fireTowerRouter = require('./routes/fire-towers');
 const myHikesRouter= require('./routes/myHikes');
 const mapsRouter = require('./routes/maps');
-// const imagesRouter = require('./routes/images');
+const imagesRouter = require('./routes/images');
 const weatherRouter = require('./routes/weather');
 
 
 
 var app = express();
+
+// Set the storage engine
+const storage = multer.diskStorage({
+  destination: './uploads/',
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+
+// Initialize Multer
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 1000000 } 
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -57,7 +73,7 @@ app.use('/fire-tower', fireTowerRouter);
 app.use('/hikes', myHikesRouter)
 app.use('/map', mapsRouter)
 app.use('/weather', weatherRouter);
-// app.use('/images', imagesRouter);
+app.use('/images', imagesRouter);
 
 
 

@@ -1,10 +1,11 @@
-// const User = require('../models/user');
 
 
-// async function getImage(req,res) {
-//     try {
-// res.render
-//     } catch (err) {
 
-//     }
-// }
+async function getImage(req,res) {
+     try {
+        const file= req.file;
+ res.render()
+     } catch (err) {
+
+     }
+ }
