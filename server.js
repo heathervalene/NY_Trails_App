@@ -6,7 +6,7 @@ var logger = require('morgan');
 const session = require('express-session')
 const passport = require('passport')
 const methodOverride = require('method-override')
-// const upload = require('./upload')
+
 
 
 
@@ -25,7 +25,6 @@ const reviewsRouter = require('./routes/reviews')
 const fireTowerRouter = require('./routes/fire-towers');
 const myHikesRouter= require('./routes/myHikes');
 const mapsRouter = require('./routes/maps');
-// const imagesRouter = require('./routes/images');
 const weatherRouter = require('./routes/weather');
 
 
@@ -63,7 +62,7 @@ app.use('/fire-tower', fireTowerRouter);
 app.use('/hikes', myHikesRouter)
 app.use('/map', mapsRouter)
 app.use('/weather', weatherRouter);
-// app.use('/images', imagesRouter);
+
 
 
 
