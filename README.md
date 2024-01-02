@@ -21,6 +21,8 @@
 - HTML
 - CSS
 - JavaScript
+- Google Maps API
+- Open Weather API
 - Excalidraw- wireframe
 - [Trello- project plan](https://trello.com/b/s7UQhuW6/fullstack-web-app)
 
@@ -49,7 +51,7 @@
 
 #### App Images
 
-
+![landingPage](https://i.imgur.com/9uuSuuM.png)
 
 
 
@@ -57,12 +59,18 @@
 
 #### **_Future Updates_**
 
-
+- Ability to add images to your profile
+- Deletion of images, hikes & firetowers from profile
+- Integration of weather with maps 
 
 
 
 ***
 
 ### **_Credits_**
+
+- [AllTrails](https://www.alltrails.com/)
+- [StackOverflow](https://stackoverflow.com/)
+- [OpenWeather](https://openweathermap.org/)
 
 
