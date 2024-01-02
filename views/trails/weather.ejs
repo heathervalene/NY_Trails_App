@@ -1,17 +1,18 @@
 <%- include('../partials/header') %>
 
+<div class="weather-container">
 
-<h1>Weather Information</h1>
+<h1>Weather Information for Hunter Area</h1>
+
 
 <% if (weatherData) { %>
+    <img src="<%= weatherIconUrl %>" alt="Weather Icon">
     <p>Time: <%= formatTime(weatherData.current.dt) %></p>
     <p>Temperature: <%= weatherData.current.temp %> &deg;F</p>
     <p>Real Feel: <%= weatherData.current.feels_like %> &deg;F</p>
     <p>Sunrise: <%= formatTime(weatherData.current.sunrise) %>AM</p>
     <p>Sunset: <%= formatTime(weatherData.current.sunset) %>PM</p>
     
-  
-     <img id="weather" src="<%= mapTilesUrl %>" alt="Weather Map">
 <% } else { %>
     <p>No weather data available</p>
 <% } %>
@@ -23,8 +24,7 @@
     <% const formattedTime = hours + ':' + minutes.substr(-2); %>
     <%= formattedTime %>
 <% } %>
-
-
+</div>
 
 
 <%- include('../partials/footer') %>
