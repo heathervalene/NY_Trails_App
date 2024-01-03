@@ -1,29 +1,26 @@
 <%- include('../partials/header') %>
 
 <div class="weather-container">
+    <h1>Local Weather</h1>
 
-<h1>Local Weather</h1>
+    <% if (weatherData) { %>
+        <img src="<%= weatherIconUrl %>" alt="Weather Icon">
+        <p>Time: <%= formatTime(weatherData.current.dt) %></p>
+        <p>Temperature: <%= weatherData.current.temp %> &deg;F</p>
+        <p>Real Feel: <%= weatherData.current.feels_like %> &deg;F</p>
+        <p>Sunrise: <%= formatTime(weatherData.current.sunrise) %>AM</p>
+        <p>Sunset: <%= formatTime(weatherData.current.sunset) %>PM</p>
+    <% } else { %>
+        <p>No weather data available</p>
+    <% } %>
 
 
-<% if (weatherData) { %>
-    <img src="<%= weatherIconUrl %>" alt="Weather Icon">
-    <p>Time: <%= formatTime(weatherData.current.dt) %></p>
-    <p>Temperature: <%= weatherData.current.temp %> &deg;F</p>
-    <p>Real Feel: <%= weatherData.current.feels_like %> &deg;F</p>
-    <p>Sunrise: <%= formatTime(weatherData.current.sunrise) %>AM</p>
-    <p>Sunset: <%= formatTime(weatherData.current.sunset) %>PM</p>
-    
-<% } else { %>
-    <p>No weather data available</p>
-<% } %>
-
-<% function formatTime(timestamp) { %>
-    <% const date = new Date(timestamp * 1000); %>
-    <% const hours = date.getHours(); %>
-    <% const minutes = "0" + date.getMinutes(); %>
-    <% const formattedTime = hours + ':' + minutes.substr(-2); %>
-    <%= formattedTime %>
-<% } %>
+    <% function formatTime(timestamp) { %>
+        <% const date = new Date(timestamp * 1000); %>
+        <% const hours = date.getHours(); %>
+        <% const minutes = "0" + date.getMinutes(); %>
+        <%= hours + ':' + minutes.substr(-2) %>
+    <% } %>
 </div>
 
 
