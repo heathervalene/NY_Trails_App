@@ -17,7 +17,7 @@
  
       let openWeatherMapLayer = new google.maps.ImageMapType({
         getTileUrl: function (coord, zoom) {
-            return 'https://tile.openweathermap.org/map/temp_new/' + zoom + '/' + coord.x + '/' + coord.y + '.png?appid=d16785159270c1f96141537f606e54da';
+            return 'https://tile.openweathermap.org/map/clouds_new/' + zoom + '/' + coord.x + '/' + coord.y + '.png?appid=d16785159270c1f96141537f606e54da';
         },
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 18,
