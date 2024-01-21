@@ -43,6 +43,17 @@ nav a:hover {
   border-radius: 1em;
 }
 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+}
+
 
 /* index page */
 
@@ -113,7 +124,7 @@ nav a:hover {
 
 #detail-table {
   margin: 0 auto; 
-  max-width: 800px; 
+  max-width: 100%; 
   font-size:1.3em;
  
  
@@ -174,6 +185,26 @@ td {
   border-radius: 50%;
   margin-right: 0.5em;
 }
+
+@media (max-width: 768px) {
+  #detail-table {
+    font-size: 1em;
+    width: 50%;
+  }
+
+#mountain-image {
+  width: 70%;
+  height: 70%;
+}
+#add-review-form {
+  width: 50%;
+}
+
+input[type="submit"] {
+  width: 50%;
+}
+}
+ 
 
 
 /* map*/
@@ -319,5 +350,32 @@ button:hover {
 
 #my-hike-list th {
   background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+  #my-firetower-list,
+  #my-hike-list {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  #my-firetower-list thead,
+  #my-hike-list thead {
+    display: none;
+  }
+
+  #my-firetower-list tbody,
+  #my-hike-list tbody {
+    display: inline-block;
+  }
+
+  #my-firetower-list td,
+  #my-hike-list td {
+    font-size: 9px; 
+    padding: 6px;
+    display: inline-block; 
+    width: 100%; 
+    box-sizing: border-box; 
+  }
 }
 
