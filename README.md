@@ -12,7 +12,7 @@
 
 #### This is a fullstack web app that allows the user find details of different hiking trails and Fire Towers in New York. 
 
-[Live Site](https://ny-trails-app-8f7dc85a93e4.herokuapp.com/trails)
+[Live Site](https://ny-trails-app.fly.dev/trails)
 
 ***
 
